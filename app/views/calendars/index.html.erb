@@ -11,10 +11,15 @@
 </div>
 <div>
   <div class='calendar'>
+
+    <%# issue5　訂正箇所  %>
     <% @week_days.each do |day| %>
       <div class='item'>
         <div class='date'>
-          <% day[:month] %>/<% day[:date] %>
+
+          <%#  day[:month] / day[:date]  %>
+          <%= day[:month]%> / <%= day[:date]%>
+
         </div>
         <ul class='content'>
         <% if day[:plans].length != 0 %>
