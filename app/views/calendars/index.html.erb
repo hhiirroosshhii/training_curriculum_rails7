@@ -1,7 +1,7 @@
 <div>
   <%# issue4 訂正箇所 %>
-  <%# <%= form_with model: @plan, url: calendars_path, class: 'form' do |f| %> %>
-  <%= form_with model: @plan, url: new_create_path, class: 'form' do |f| %>
+  <%#  form_with model: @plan, url: calendars_path, class: 'form' do |f| %> 
+  <%= form_with model: @plan, url: calendars_path, class: 'form' do |f| %>
     <%= f.label :日付を選択, class: 'label' %>
     <%= f.date_field :date, class: 'date-select' %>
     <%= f.label :予定を入力, class: 'label' %>
@@ -12,13 +12,13 @@
 <div>
   <div class='calendar'>
 
-    <%# issue5　訂正箇所  %>
+    <%# issue5,6訂正箇所  %>
     <% @week_days.each do |day| %>
       <div class='item'>
         <div class='date'>
 
           <%#  day[:month] / day[:date]  %>
-          <%= day[:month]%> / <%= day[:date]%>
+          <%= day[:month]%> / <%= day[:date] %> <%= day[:wday]%> 
 
         </div>
         <ul class='content'>
