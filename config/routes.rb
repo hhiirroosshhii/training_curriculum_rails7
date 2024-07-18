@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
   root 'calendars#index'
-  resources :calendars
+
+  # issue4　訂正箇所
+  resources :create
+  # resources :calendars
 end
